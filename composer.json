@@ -1,0 +1,21 @@
+{
+    "name": "robert/assessken",
+    "description": "cbe assessment system kenya",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AssessKen\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robert",
+            "email": "robertmutua95@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "vlucas/phpdotenv": "^5.7"
+    }
+}
