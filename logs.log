@@ -1,0 +1,19 @@
+[08-Oct-2026 19:44:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method AssessKen\Controllers\HomeController::seedSchool() in /var/www/assessken/src/Models/Router.php:49
+Stack trace:
+#0 /var/www/assessken/public/index.php(19): AssessKen\Models\Router->dispatch()
+#1 {main}
+  thrown in /var/www/assessken/src/Models/Router.php on line 49
+[08-Oct-2026 19:44:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method AssessKen\Controllers\HomeController::seedSchool() in /var/www/assessken/src/Models/Router.php:49
+Stack trace:
+#0 /var/www/assessken/public/index.php(19): AssessKen\Models\Router->dispatch()
+#1 {main}
+  thrown in /var/www/assessken/src/Models/Router.php on line 49
+[08-Oct-2026 19:45:21 UTC] PHP Fatal error:  Uncaught Error: Class "Model" not found in /var/www/assessken/src/Models/Schools.php:7
+Stack trace:
+#0 /var/www/assessken/vendor/composer/ClassLoader.php(576): include()
+#1 /var/www/assessken/vendor/composer/ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}()
+#2 /var/www/assessken/src/Controllers/TestController.php(35): Composer\Autoload\ClassLoader->loadClass()
+#3 /var/www/assessken/src/Models/Router.php(49): AssessKen\Controllers\TestController->seedSchool()
+#4 /var/www/assessken/public/index.php(19): AssessKen\Models\Router->dispatch()
+#5 {main}
+  thrown in /var/www/assessken/src/Models/Schools.php on line 7

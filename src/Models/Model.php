@@ -1,5 +1,7 @@
 <?php
 
+namespace AssessKen\Models;
+
 use AssessKen\Models\Database;
 use PDO;
 use Throwable;

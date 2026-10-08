@@ -35,4 +35,28 @@ class Database
 
         return self::$connection;
     }
+
+    public static function migrations(): void
+    {
+        $db = self::connect();
+
+        $sqls = [
+            "CREATE TABLE IF NOT EXISTS schools (
+            id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            address VARCHAR(255) NOT NULL,
+            phone VARCHAR(255) NOT NULL,
+            email VARCHAR(255) NOT NULL,
+            logo_path VARCHAR(255) NOT NULL,
+            principal_signature_path VARCHAR(100) NOT NULL,
+            code VARCHAR(50) NOT NULL UNIQUE,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+        ];
+
+        foreach ($sqls as $sql) {
+            $db->exec($sql);
+        }
+    }
 }
